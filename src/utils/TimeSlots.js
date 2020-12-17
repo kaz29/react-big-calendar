@@ -19,7 +19,7 @@ export function getSlotMetrics({ min: start, max: end, step, timeslots }) {
     1 + dates.diff(start, end, 'minutes') + getDstOffset(start, end)
   const minutesFromMidnight =
     dates.diff(daystart, start, 'minutes') + daystartdstoffset
-  const numGroups = Math.ceil(totalMin / (step * timeslots))
+  const numGroups = Math.ceil(totalMin / (step * timeslots)) - 1
   const numSlots = numGroups * timeslots
 
   const groups = new Array(numGroups)

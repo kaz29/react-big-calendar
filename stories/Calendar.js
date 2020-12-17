@@ -40,8 +40,8 @@ storiesOf('Big Calendar', module)
       <Calendar
         selectable
         defaultView={Views.WEEK}
-        min={moment('12:00am', 'h:mma').toDate()}
-        max={moment('11:59pm', 'h:mma').toDate()}
+        min={moment('10:00am', 'h:mma').toDate()}
+        max={moment('22:00pm', 'h:mma').toDate()}
         events={events}
         onSelectEvent={action('event selected')}
         onSelectSlot={action('slot selected')}
